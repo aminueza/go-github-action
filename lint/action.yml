@@ -1,0 +1,16 @@
+name: GO lint
+description: Lints Go code
+author: aminueza
+inputs:
+  path:
+    description: Relative path under $GITHUB_WORKSPACE to run the linter against
+    default: ...
+    required: false
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+  - ${{ inputs.path }}
+branding:
+  icon: alert-circle
+  color: blue

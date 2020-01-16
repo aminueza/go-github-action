@@ -1,0 +1,20 @@
+name: Go vet code linter
+description: Lints Go code for things that are likely problems
+author: aminueza
+inputs:
+  path:
+    description: Relative path under $GITHUB_WORKSPACE to run the linter against
+    default: ...
+    required: false
+  vettool:
+    description: The vettool to run instead of the default
+    required: false
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+  - ${{ inputs.path }}
+  - ${{ inputs.vettool }}
+branding:
+  icon: alert-circle
+  color: blue

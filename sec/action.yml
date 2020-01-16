@@ -1,0 +1,24 @@
+name: Go sec code linter
+description: Lints Go code for security issues
+author: aminueza
+inputs:
+  path:
+    description: Relative path under $GITHUB_WORKSPACE to run the linter against
+    default: ...
+    required: false
+  confidence:
+    description: Filter out issues with a lower confidence than the given value (low (default), medium, high)
+    required: false
+  severity:
+    description: Filter out issues with a lower severity than the given value (low (default), medium, high)
+    required: false
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+  - ${{ inputs.path }}
+  - ${{ inputs.confidence }}
+  - ${{ inputs.severity }}
+branding:
+  icon: alert-circle
+  color: blue
