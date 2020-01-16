@@ -5,7 +5,7 @@ ACTION_PATH=${GITHUB_WORKSPACE:-.}/$1
 BASE_DIR=$(dirname "$ACTION_PATH")
 
 # Execute golint tool, removing comment lines and 'tool: ' prefixes
-ERRORS=$(./bin/golint "$ACTION_PATH" 2>&1)
+ERRORS=$(/go/bin/golint "$ACTION_PATH" 2>&1)
 if [ $? -eq 2 ]; then
 	echo '::error::golint tool failed to run'
 	echo "$ERRORS"
