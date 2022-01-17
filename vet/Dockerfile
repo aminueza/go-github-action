@@ -1,4 +1,4 @@
-FROM golang:1.16
+FROM golang:1.17
 
 RUN go get golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow
 
