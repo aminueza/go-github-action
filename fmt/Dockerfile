@@ -1,4 +1,4 @@
-FROM golang:1.13
+FROM golang:1.17
 
 COPY fmt.sh /
 ENTRYPOINT ["/fmt.sh"]
