@@ -1,6 +1,6 @@
-FROM golang:1.17
+FROM golang:1.19
 
-RUN go get github.com/kisielk/errcheck
+RUN go install github.com/kisielk/errcheck@latest
 
 COPY errcheck.sh /
 ENTRYPOINT ["/errcheck.sh"]

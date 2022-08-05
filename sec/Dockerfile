@@ -1,6 +1,6 @@
-FROM golang:1.17
+FROM golang:1.19
 
-RUN go get github.com/securego/gosec/cmd/gosec
+RUN go install github.com/securego/gosec/v2/cmd/gosec@latest
 
 COPY sec.sh /
 ENTRYPOINT ["/sec.sh"]
