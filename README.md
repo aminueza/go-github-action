@@ -4,7 +4,6 @@ Gitbub actions templates to:
 
 - [Errcheck](https://github.com/kisielk/errcheck) - Program for checking for unchecked errors in go programs.
 - [Fmt](https://cs.opensource.google/go/go) - Check the GO unformated files.
-- [Lint](https://github.com/golang/lint)- [DEPRECATED] Please use [Staticcheck](https://github.com/dominikh/go-tools) instead.
 - [Gosec](https://github.com/securego/gosec) - Inspects source code for security problems by scanning the Go AST.
 - [Vet](https://pkg.go.dev/cmd/vet) -  Examines Go source code and reports suspicious constructs.
 
@@ -41,7 +40,4 @@ jobs:
         uses: aminueza/go-github-action/errcheck@master
         with:
           path: minio/...
-      - name: Run linter
-        uses: aminueza/go-github-action/lint@master
-
 ```
