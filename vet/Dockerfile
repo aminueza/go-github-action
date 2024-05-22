@@ -1,4 +1,4 @@
-FROM golang:1.19
+FROM golang:1.20
 
 RUN go install golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow@latest
 
