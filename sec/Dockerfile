@@ -1,4 +1,4 @@
-FROM golang:1.20
+FROM golang:latest
 
 RUN go install github.com/securego/gosec/v2/cmd/gosec@v2.19.0
 
