@@ -1,4 +1,4 @@
-FROM golang:1.23
+FROM golang:latest
 
 RUN go install github.com/kisielk/errcheck@latest
 
